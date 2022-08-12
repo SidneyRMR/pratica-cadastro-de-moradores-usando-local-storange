@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Estoque - Cadastro de novos produtos</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/funcoes.js"></script>
+    <!-- <img src="img/predio.jpg" id="background"> -->
+</head>
+
+<body onload="carregarTotalMoradores('totalMoradores')" >
+
+    <!--Carrinho de compras-->
+    <div class="moradores">
+        
+        <p>Total de Moradores: <span id="totalMoradores">0</span></p>
+    </div>
+    
+    <!--Formulário-->
+    <form>
+        <table>
+            <caption>Cadastro de novos moradores</caption>
+            <!--Nome do Morador-->
+            <tr>
+                <td class="alinharRotulos">Nome completo:</td>
+                <td><input id="txtNomeMorador" type="text"></td>
+            </tr>
+
+
+            <tr>
+                <td class="alinharRotulos">Bloco</td>
+                <td>
+                    <select id="bloco">
+                        <option value="selecionar">Selecionar</option>
+                        <option value="C">Bloco C</option>
+                        <option value="D">Bloco D</option>
+                    </select>
+                </td>   
+            </tr>   
+            <tr>
+                <td class="alinharRotulos">Apartamento</td>
+                <td>
+                    <select id="pavimento">
+                        <option value="selecionar">Selecionar</option>
+                        <option value="1">1º Pavimento</option>
+                        <option value="2">2º Pavimento</option>
+                        <option value="3">3º Pavimento</option>
+                        <option value="4">4º Pavimento</option>
+                        <option value="5">5º Pavimento</option>
+                        <option value="6">6º Pavimento</option>
+                        <option value="7">7º Pavimento</option>
+                        <option value="8">8º Pavimento</option>
+                    </select>
+                    <select id="apto">
+                        <option value="selecionar">Selecionar</option>
+                        <option value="1">Apartamento 1</option>
+                        <option value="2">Apartamento 2</option>
+                        <option value="3">Apartamento 3</option>
+                        <option value="4">Apartamento 4</option>
+                    </select>
+                </td>
+            </tr>
+            <!--Botoes-->
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="button" value="Cadastrar" class="alinhaBtns" onclick="validarMoradores('txtNomeMorador','bloco','pavimento','apto')">
+                    <input type="button" value="Consultar" class="alinhaBtns" onclick="window.open('consultar.html','_self')">
+                    <input type="reset" value="Limpar" class="alinhaBtns">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
